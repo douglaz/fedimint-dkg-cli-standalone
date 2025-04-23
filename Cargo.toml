@@ -1,0 +1,21 @@
+[package]
+name = "fedimint-dkg-cli"
+version = "0.1.0"
+edition = "2021"
+description = "CLI tool to help Fedimint guardians complete the DKG process"
+
+[dependencies]
+anyhow = "1.0"
+async-trait = "0.1"
+clap = { version = "4.4", features = ["derive"] }
+dirs = "5.0"
+fedimint-core = { git = "https://github.com/fedimint/fedimint", branch = "master" }
+fedimint-api-client = { git = "https://github.com/fedimint/fedimint", branch = "master" }
+# fedimint-core = { path = "../fedimint/fedimint-core" }
+# fedimint-api-client = { path = "../fedimint/fedimint-api-client" }
+reqwest = { version = "0.11", features = ["json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.34", features = ["full"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
